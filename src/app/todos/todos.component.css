@@ -1,0 +1,114 @@
+.header {
+  width: 100%;
+  padding: 100px;
+  background-image: linear-gradient(to right, #136e9e, #85d8ce);
+  display: flex;
+}
+
+.title {
+  margin: auto;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.267);
+  font-size: 3.2rem;
+}
+.btn-add {
+  display: flex;
+  background-image: linear-gradient(to right, #b24592, #f15f79);
+  border: none;
+  border-radius: 5px;
+  width: 15%;
+  height: 35px;
+  cursor: pointer;
+  transition: all 1s ease-in;
+}
+
+.btn-add:hover {
+  background-image: linear-gradient(to right, #8f3173, #af4055);
+}
+
+.btn-add:active {
+  background-image: linear-gradient(to right, #63204f, #792131);
+}
+
+.plus {
+  width: 24px;
+  height: 24px;
+}
+
+.form {
+  display: flex;
+  gap: 4%;
+  margin-left: 5%;
+}
+
+.add {
+  font-size: 2rem;
+  margin: auto;
+}
+
+.plus {
+  margin: auto;
+}
+
+.container {
+  background-color: #f7c3cc;
+  width: 35%;
+  height: 25%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+
+.para {
+  margin-left: 8%;
+  font-size: 2rem;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.input {
+  margin-left: 2%;
+  width: 75%;
+  height: 35px;
+  border: 1px solid pink;
+  border-radius: 5px;
+  margin-bottom: 4%;
+  padding-left: 2.5%;
+}
+
+.input:active {
+  outline: none;
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.warning {
+  font-size: 1.3rem;
+  margin-left: 8%;
+  transform: translateY(-100%);
+  color: red;
+}
+
+.ng-invalid.input.ng-touched {
+  border: 1px solid red;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.section {
+  display: flex;
+}
+
+.list-container {
+  margin: auto;
+  width: 30%;
+}
