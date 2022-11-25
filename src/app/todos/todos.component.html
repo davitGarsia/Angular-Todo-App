@@ -2,7 +2,7 @@
   <h1 class="title">Todos</h1>
 </section>
 
-<div class="add-todos">
+<div class="add-todos for-sticky">
   <div class="container">
     <P class="para">New Todo</P>
     <form (ngSubmit)="onSubmit()" #f="ngForm">
@@ -50,7 +50,13 @@
 <section class="section">
   <div class="list-container">
     <div class="todos-list">
-      <app-todo-item *ngFor="let todo of todos" [todo]="todo"></app-todo-item>
+      <app-todo-item
+        *ngFor="let todo of todos; let i = index"
+        [todo]="todo"
+        (todoClicked)="setCompleted(todo)"
+        (editClicked)="editTodo(todo)"
+        (deleteClicked)="deleteTodo(todo)"
+      ></app-todo-item>
     </div>
   </div>
 </section>

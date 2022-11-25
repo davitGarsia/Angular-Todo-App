@@ -1,6 +1,6 @@
 .check-box {
   border: 1px solid #eee;
-  width: 20px;
+  width: 19px;
   height: 18px;
   border-radius: 50%;
 }
@@ -56,8 +56,8 @@
 .todo-controls-box {
   display: flex;
   position: absolute;
-  gap: 20%;
-  padding: 0 5% 0 3%;
+  gap: 5%;
+
   right: 0;
   bottom: 0;
   background-color: #f8f8f8b8;
@@ -74,11 +74,29 @@
   visibility: visible;
 }
 
-.todo-controls-box:hover {
+/* .todo-controls-box:hover {
   background-color: #eee;
-}
+} */
 
 .control-btn {
   width: 24px;
   height: 24px;
+}
+
+.edit-btn {
+  padding-left: 5px;
+
+  border-radius: 5px;
+}
+
+.edit-btn:hover {
+  background-color: rgb(232, 229, 229);
+}
+
+.dlt-btn:hover {
+  background-color: rgb(213, 64, 64);
+}
+
+.dlt-btn {
+  border-radius: 5px;
 }

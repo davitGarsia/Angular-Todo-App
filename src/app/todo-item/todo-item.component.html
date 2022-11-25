@@ -1,4 +1,4 @@
-<div class="todo-item" [class.completed]="todo.completed">
+<div class="todo-item" (click)="onClicked()" [class.completed]="todo.completed">
   <div class="check-box">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,15 +19,15 @@
   <div class="todo-text">
     {{ todo.text }}
   </div>
-  <div class="todo-controls-box">
-    <div class="todo-control-btn">
+  <div class="todo-controls-box" (click)="$event.stopPropagation()">
+    <div class="todo-control-btn" (click)="onEdit()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="control-btn"
+        class="control-btn edit-btn"
       >
         <path
           stroke-linecap="round"
@@ -36,14 +36,14 @@
         />
       </svg>
     </div>
-    <div class="todo-control-btn">
+    <div class="todo-control-btn" (click)="onDeleteTodo()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="control-btn"
+        class="control-btn dlt-btn"
       >
         <path
           stroke-linecap="round"

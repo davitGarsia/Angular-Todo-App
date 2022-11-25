@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { DataService } from '../shared/data.service';
 import { Todo } from '../shared/todo.model';
 
@@ -9,12 +9,19 @@ import { Todo } from '../shared/todo.model';
 })
 export class TodoItemComponent {
   @Input() todo: any = [];
+  @Output() todoClicked = new EventEmitter<void>();
+  @Output() editClicked = new EventEmitter<void>();
+  @Output() deleteClicked = new EventEmitter<void>();
 
-  // onSubmit() {
-  //   console.log(this.userInput);
-  //   this.dataService.addTodo(new Todo(this.userInput.value.userInput));
-  //   this.todos = this.dataService.getAllTodos();
+  onClicked() {
+    this.todoClicked.emit();
+  }
 
-  //   this.userInput.reset();
-  // }
+  onEdit() {
+    this.editClicked.emit();
+  }
+
+  onDeleteTodo() {
+    this.deleteClicked.emit();
+  }
 }

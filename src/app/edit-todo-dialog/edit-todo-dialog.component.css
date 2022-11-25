@@ -1,0 +1,56 @@
+.control {
+  display: flex;
+}
+
+.title {
+  margin-left: 70px;
+}
+
+.input {
+  margin: auto;
+  width: 500px;
+  height: 35px;
+  border: 1px solid rgb(98, 97, 158);
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  gap: 20px;
+  margin-left: 350px;
+  text-align: center;
+  justify-content: center;
+}
+
+.btn {
+  display: flex;
+  border: none;
+  border-radius: 5px;
+  width: 70px;
+  height: 30px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.cancel {
+  background-color: #eee;
+}
+
+.save {
+  background-color: rgb(121, 121, 234);
+}
+
+.warning {
+  font-size: 1.3rem;
+  margin-left: 8%;
+  transform: translateY(-100%);
+  color: red;
+}
+
+.ng-invalid.input.ng-touched {
+  border: 1px solid red;
+}
